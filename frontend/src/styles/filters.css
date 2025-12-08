@@ -1,0 +1,114 @@
+/* -------------------------
+   FILTERS LAYOUT
+-------------------------- */
+.filters-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin: 20px 0;
+}
+
+.filters-container select,
+.dropdown-button {
+  padding: 8px 12px;
+  font-size: 14px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  cursor: pointer;
+  min-width: 150px;
+  height: 36px;
+}
+
+/* -------------------------
+   DROPDOWN CONTAINER
+-------------------------- */
+.dropdown-container {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-button {
+  width: 150px;
+  text-align: left;
+  padding: 8px 12px;
+  font-size: 14px;
+  font-weight: 500;
+
+  /* REMOVE DROPDOWN ARROW */
+  appearance: none !important;
+  -webkit-appearance: none !important;
+  -moz-appearance: none !important;
+  background-image: none !important;
+}
+
+.dropdown-button:hover {
+  border-color: #007bff;
+}
+
+/* -------------------------
+   DROPDOWN POPUP CONTENT
+-------------------------- */
+.dropdown-content {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  position: absolute;
+  background-color: #fff;
+  min-width: 160px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  z-index: 1000;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.dropdown-content input[type="number"],
+.dropdown-content input[type="date"] {
+  padding: 6px 10px;
+  font-size: 14px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.dropdown-content button {
+  padding: 6px 10px;
+  font-size: 14px;
+  border-radius: 4px;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+}
+
+.dropdown-content button:hover {
+  background-color: #0056b3;
+}
+
+/* -------------------------
+   REMOVE ARROWS FROM INPUTS
+-------------------------- */
+
+/* Remove number input arrows */
+.dropdown-content input[type="number"]::-webkit-inner-spin-button,
+.dropdown-content input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none !important;
+  margin: 0;
+}
+
+.dropdown-content input[type="number"] {
+  -moz-appearance: textfield !important;
+}
+
+/* Remove calendar icon from date input */
+.dropdown-content input[type="date"]::-webkit-calendar-picker-indicator {
+  display: none !important;
+}
+
+.dropdown-content input[type="date"] {
+  appearance: none !important;
+  -webkit-appearance: none !important;
+  -moz-appearance: none !important;
+}

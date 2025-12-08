@@ -1,0 +1,21 @@
+/* Center the whole app */
+.app-container {
+  max-width: 1261px;       /* adjust width */
+  margin: 0 auto;           /* centers horizontally */
+  padding: 20px;
+}
+
+/* Header section */
+.header-section {
+  display: flex;
+  justify-content: space-between;   /* heading left, search right */
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+/* Heading styling */
+.header-section h2 {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 600;
+}
