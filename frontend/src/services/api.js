@@ -1,8 +1,8 @@
 import axios from "axios";
 
 const API = axios.create({
-  baseURL: "http://localhost:4000/api",
+  baseURL: "https://truestate-o8fx.onrender.com",
 });
 
 export const fetchTransactions = (params) =>
-  API.get("/transactions", { params });
+  API.get("/api/transactions", { params });
