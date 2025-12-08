@@ -11,8 +11,7 @@
   padding: 8px 14px; /* reduce padding */
   border-radius: 10px;
   width: 220px;
-
-  height: 80px; /* FORCE fixed small height */
+/* FORCE fixed small height */
   display: flex;
   flex-direction: column;
   justify-content: center; /* center content vertically */
