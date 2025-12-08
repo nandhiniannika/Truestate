@@ -4,4 +4,23 @@
   border-radius: 5px;
   border: 1px solid #bbb;
   width: 220px;
+  max-width: 100%; /* prevent overflow on small screens */
+  transition: all 0.2s ease;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .sort-dropdown {
+    width: 180px;
+    font-size: 14px;
+    padding: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .sort-dropdown {
+    width: 90%; /* almost full width on mobile */
+    font-size: 13px;
+    padding: 6px;
+  }
 }

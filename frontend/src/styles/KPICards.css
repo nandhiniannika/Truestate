@@ -3,31 +3,33 @@
   gap: 18px;
   margin: 10px 0 18px 0;
   flex-wrap: wrap;
-  height: 110px;
+  height: auto; /* let cards adjust height automatically */
 }
 
 .kpi-card {
   background: #ffffff;
   border: 1px solid #e3e3e3;
-  padding: 8px 14px; /* reduced padding */
+  padding: 8px 14px;
   border-radius: 10px;
   width: 220px;
 
   display: flex;
   flex-direction: column;
-  justify-content: flex-start; /* align content at top for better spacing control */
+  justify-content: flex-start;
   box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.07);
+
+  transition: all 0.3s ease; /* smooth resizing */
 }
 
 .kpi-card-header span {
-  font-size: 13px;   /* smaller header text */
+  font-size: 13px;
   font-weight: 600;
   color: #444;
 }
 
 .kpi-value {
-  margin-top: 4px;   /* spacing between header and value */
-  font-size: 18px;   /* smaller value size */
+  margin-top: 4px;
+  font-size: 18px;
   font-weight: 700;
   color: #222;
 }
@@ -39,13 +41,47 @@
 
 .kpi-card h3 {
   margin: 0;
-  margin-bottom: 2px;  /* reduce spacing between heading & paragraph */
+  margin-bottom: 2px;
   font-size: 16px;
   font-weight: 600;
 }
 
 .kpi-card p {
-  margin: 0;           /* remove extra gap */
+  margin: 0;
   font-size: 14px;
-  font-weight: 500;   /* tighter line height for compact look */
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+  .kpi-card {
+    width: 200px;
+    padding: 6px 12px;
+  }
+  .kpi-value {
+    font-size: 16px;
+  }
+  .kpi-card h3 {
+    font-size: 15px;
+  }
+  .kpi-card p {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 992px) {
+  .kpi-card {
+    width: 48%; /* 2 cards per row */
+    margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .kpi-card {
+    width: 100%; /* full width on small screens */
+  }
+  .kpi-container {
+    gap: 12px;
+  }
 }
